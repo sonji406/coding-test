@@ -3,16 +3,14 @@ function solution(dot) {
     const firstSign = Math.sign(dot[0]) === 1;
     const lastSign = Math.sign(dot[1]) === 1;
     
-    if (firstSign) {
-        if (lastSign) {
-            answer = 1;
-        } else {
-            answer = 4;
-        }
-    } else if (lastSign) {
+    if (firstSign && lastSign) {
+        answer = 1;
+    } else if (!firstSign && lastSign) {
         answer = 2;
-    } else {
+    } else if (!firstSign && !lastSign) {
         answer = 3;
+    } else {
+        answer = 4;
     }
     return answer;
 }
