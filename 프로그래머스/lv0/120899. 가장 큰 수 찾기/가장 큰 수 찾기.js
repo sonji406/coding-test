@@ -1,9 +1,9 @@
 function solution(array) {
     var answer = [];
-    const maxNum = array.reduce((a, b) => Math.max(a, b))
+    const maxNum = Math.max(...array);
     
     answer.push(maxNum);
-    answer.push(array.indexOf(maxNum))
+    answer.push(array.indexOf(maxNum));
     
     return answer;
 }
