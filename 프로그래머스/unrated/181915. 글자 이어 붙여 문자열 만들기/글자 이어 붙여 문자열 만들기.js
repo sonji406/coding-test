@@ -1,18 +1,8 @@
 function solution(my_string, index_list) {
-    var answer = '';
+    var result = '';
     const stringArray = Array.from(my_string);
+    const resultArray = index_list.map((num) => stringArray[num]);
+    result = resultArray.join('');
     
-    for (const num of index_list) {
-        answer += stringArray[num];  
-    }
-    
-    
-//     for (let i = 0; i < index_list.length; i++) {
-//         const arrayIndex = index_list[i];
-//         if (stringArray[arrayIndex] !== undefined) {
-//             answer += stringArray[arrayIndex];
-//         }
-//     }
-    
-    return answer;
+    return result;
 }
