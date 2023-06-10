@@ -1,19 +1,13 @@
 function solution(balls, share) {
-    let ballsSum = 1;
-    let ballsShare = 1;
-    let shareSum = 1;
-    
-    for (let i = 1; i <= balls; i++) {
-        ballsSum *= i;
+    if (balls === share || share === 0) {
+        return 1;
     }
-    
-    for (let j = 1; j <= balls - share; j++) {
-        ballsShare *= j;
+    return Math.round(factorial(balls) / (factorial(balls - share) * factorial(share)));
+}
+
+function factorial(n) {
+    if (n === 0) {
+        return 1;
     }
-    
-    for (let k = 1; k <= share; k++) {
-        shareSum *= k;
-    }
-    
-    return Math.round(ballsSum / (ballsShare * shareSum));
+    return n * factorial(n - 1);
 }
