@@ -1,5 +1,5 @@
 function solution(balls, share) {
-    if (balls === share || share === 0) {
+    if (balls === share) {
         return 1;
     }
     return Math.round(factorial(balls) / (factorial(balls - share) * factorial(share)));
