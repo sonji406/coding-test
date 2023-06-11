@@ -3,9 +3,9 @@ function solution(n) {
     let num = 1;
     
     while (num <= n) {
+        answer++;
         num *= answer; 
-        answer ++;
     }
     
-    return answer - 2;
+    return answer - 1;
 }
