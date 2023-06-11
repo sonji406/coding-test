@@ -6,8 +6,8 @@ function solution(num_list, n) {
         arr.push(num_list[i]);
         
         if (arr.length === n) {
-            answer.push([...arr]);
-            arr.length = 0;
+            answer.push(arr);
+            arr = arr.slice(n);  
         }
     }
         
